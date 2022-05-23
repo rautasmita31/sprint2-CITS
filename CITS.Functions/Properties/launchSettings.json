@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CITS.Functions": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "sqlCS": "server=arcg-sql-azure.database.windows.net;Database=CITSDb;User Id=cgadmin;Password=Asmiraut@1997;MultipleActiveResultSets=True;"
+      }
+    }
+  }
+}

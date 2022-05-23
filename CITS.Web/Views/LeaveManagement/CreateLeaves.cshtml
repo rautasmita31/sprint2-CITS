@@ -1,0 +1,48 @@
+﻿@model CITS.Entities.LeaveManagement
+
+@{
+    ViewData["Title"] = "CreateLeaves";
+}
+
+<h1>CreateLeaves</h1>
+
+<h4>LeaveManagement</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateLeaves">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EmailAddress" class="control-label"></label>
+                <input asp-for="EmailAddress" class="form-control" />
+                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmployeeId" class="control-label"></label>
+                <input asp-for="EmployeeId" class="form-control" />
+                <span asp-validation-for="EmployeeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartLeaveDate" class="control-label"></label>
+                <input asp-for="StartLeaveDate" class="form-control" />
+                <span asp-validation-for="StartLeaveDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndLeaveDate" class="control-label"></label>
+                <input asp-for="EndLeaveDate" class="form-control" />
+                <span asp-validation-for="EndLeaveDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" asp-controller="Home">Back to Home Page</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
